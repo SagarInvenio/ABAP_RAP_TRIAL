@@ -1,0 +1,19 @@
+//unmanaged implementation in class zbp_rap_i_bankt_sro unique;
+implementation unmanaged;
+with draft;
+
+define behavior for ZRAP_I_BANKT_SRO alias Bank
+implementation in class zbp_rap_i_bankt_sro unique
+draft table ZRAP_BANKT_SRODR
+late numbering
+lock master
+total etag Status
+//etag master Status
+{
+  field ( readonly ) Account;
+  create;
+  update;
+  delete;
+
+  //  mapping for ZRAP_I_BANKT_SRO control
+}

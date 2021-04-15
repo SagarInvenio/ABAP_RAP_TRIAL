@@ -1,0 +1,10 @@
+projection;
+
+define behavior for ZRAP_C_BANKT_SRO alias Bank
+use etag
+{
+  field ( readonly ) Account;
+  use create;
+  use update;
+  use delete;
+}

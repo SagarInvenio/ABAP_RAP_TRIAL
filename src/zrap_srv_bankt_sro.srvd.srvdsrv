@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Bank'
+define service ZRAP_SRV_BANKT_SRO {
+  expose ZRAP_C_BANKT_SRO as Bank;
+}

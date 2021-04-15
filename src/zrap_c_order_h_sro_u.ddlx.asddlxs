@@ -1,0 +1,53 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Order Header',
+                typeNamePlural: 'Order Headers',
+                title: { type: #STANDARD, value: 'Orderno' } } }
+annotate view ZRAP_C_ORDER_H_SRO with
+{
+  @UI.facet: [ { id:          'Orderno',
+                 purpose:     #STANDARD,
+                 type:        #IDENTIFICATION_REFERENCE,
+                 label:       'General Details',
+                 position:    10 },
+
+               { id:          'Orederit',
+                 purpose:     #STANDARD,
+                 type:        #LINEITEM_REFERENCE,
+                 label:       'Order Item Details',
+                 position:    20 ,
+                 targetElement: '_Orderi' }  ]
+
+  @UI: { selectionField: [{ position: 10 }], lineItem: [{ position: 10 }], identification: [ { position: 10, label: 'Order ID'  } ] }
+  @UI.lineItem: [{ type: #FOR_ACTION, dataAction: 'approveOrder', label: 'Approve'   }]
+  Orderno;
+  @UI: { selectionField: [{ position: 20 }], lineItem: [{ position: 20 }], identification: [ { position: 20, label: 'Order Type'  } ] }
+  @UI.lineItem: [{ type: #FOR_ACTION, dataAction: 'draftOrder', label: 'Draft'   }]
+  Orderty;
+  @UI: { selectionField: [{ position: 30 }], lineItem: [{ position: 30 }], identification: [ { position: 30, label: 'Company Code'  } ] }
+  Company;
+  @UI: { selectionField: [{ position: 40 }], lineItem: [{ position: 40 }], identification: [ { position: 40, label: 'Partner ID'  } ] }
+  Partner;
+  @UI: { lineItem: [{ position: 50 }], identification: [ { position: 50, label: 'Language'  } ] }
+  Spras;
+  @UI: { lineItem: [{ position: 60 }], identification: [ { position: 60, label: 'Description'  } ] }
+  Description;
+  @UI: { lineItem: [{ position: 70 }], identification: [ { position: 70, label: 'Status'  } ] }
+  Status;
+  @UI: { identification: [ { position: 80, label: 'Currency'  } ] }
+  Currency;
+  @UI: { identification: [ { position: 90, label: 'Total Value'  } ] }
+  TotValue;
+  @UI: { identification: [ { position: 100, label: 'Quantity'  } ] }
+  Quantity;
+  @UI: { identification: [ { position: 110, label: 'Total Quantity'  } ] }
+  TotQuan;
+  /* Associations */
+  //  @UI.facet: [ { id:          '_Orderi',
+  //                 purpose:     #STANDARD,
+  //                 type:        #IDENTIFICATION_REFERENCE,
+  //                 label:       'Order Item Details',
+  //                 position:    30 }  ]
+  //  _Orderi;
+
+}

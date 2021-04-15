@@ -1,0 +1,4 @@
+@EndUserText.label: 'Sample Digital Service Full SRO'
+define service ZRAPS_DIGITAT_FULL_SRO {
+  expose ZRAPIC_DIGSTAT_FULL_SRO;
+}

@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZSC_NORTHWIND_ODATA'
+@OData.schema.name: 'ODataWeb.Northwind.Model'
+define service ZSC_NORTHWIND_ODATA {
+ expose ZCATEGORIES; 
+ } 

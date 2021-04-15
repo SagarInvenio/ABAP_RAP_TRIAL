@@ -1,0 +1,46 @@
+managed implementation in class zbp_rap_i_order_h_sro unique;
+
+define behavior for ZRAP_I_ORDER_H_SRO alias Orderh
+persistent table zrap_order_h_sro
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+
+  // instance actions
+  action approveOrder result [1] $self;
+  action draftOrder result [1] $self;
+  //    internal action ReCalcTotalPrice;
+
+  // Determination at field level
+  determination DetM on modify { field Company; }
+
+  // Determination at Operation
+  //   determination DetO on save { create;update;delete;}
+
+  // Determination at trigger
+  //determination DetT on modify { create;update; field Company; }
+
+  // Validation (same as determination)
+  validation valTot on save { create; update; }
+  validation valSt  on save { field Status; }
+
+
+  create;
+  update;
+  delete;
+  //  association _Ordi {create; }
+  association _Orderi { create; }
+  //  action Calculate;
+}
+
+define behavior for ZRAP_I_ORDER_I_SRO alias Orderi
+persistent table zrap_order_i_sro
+lock dependent by _Orderh
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  update;
+  delete;
+  association _Orderh;
+}

@@ -1,0 +1,5 @@
+CLASS zbp_rap_i_bankt_sro DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zrap_i_bankt_sro.
+ENDCLASS.
+
+CLASS zbp_rap_i_bankt_sro IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Credit Card Statement'
+define service ZRAPS_CCSTAT_SRO {
+  expose ZRAPC_CCSTAT_SRO;
+}

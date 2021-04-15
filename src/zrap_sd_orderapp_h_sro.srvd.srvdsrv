@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Order Approver'
+define service ZRAP_SD_ORDERAPP_H_SRO {
+  expose ZRAP_C_ORDERAPP_H_SRO;
+}

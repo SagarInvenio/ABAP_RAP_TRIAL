@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for Order Header'
+define service ZRAP_SD_ORDER_H_SRO {
+  expose ZRAP_C_ORDER_H_SRO;
+  expose ZRAP_C_ORDER_I_SRO;
+}

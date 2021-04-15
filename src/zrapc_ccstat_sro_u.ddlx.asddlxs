@@ -1,0 +1,39 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: { typeName: 'CC_Statement',
+                typeNamePlural: 'CC_Statements',
+                title: { type: #STANDARD, value: 'Cccard' } } }
+
+annotate view ZRAPC_CCSTAT_SRO
+    with  
+{
+  @UI.facet: [ { id:            'CCStat',
+                   purpose:     #STANDARD,
+                   type:        #IDENTIFICATION_REFERENCE,
+                   label:       'General Details',
+                   position:    10
+//                   targetElement: 'TotAmonut',
+//                   targetQualifier: '10' 
+                    }  ]
+                   
+    @UI: { selectionField: [{ position: 10 }], lineItem: [{ position: 10 }] , identification: [{ position: 10, label: 'Credit Card No'  }] }                    
+    Cccard;
+    @UI: { selectionField: [{ position: 20 }], lineItem: [{ position: 20 }] }    
+    Vendor;
+    @UI: { selectionField: [{ position: 30 }], lineItem: [{ position: 30 }] }
+    Tdate;
+    @UI: { selectionField: [{ position: 40 }], lineItem: [{ position: 40 }] }
+    Authcode;
+    @UI: { selectionField: [{ position: 50 }], lineItem: [{ position: 50 }] }
+    Currency;
+    @UI: { selectionField: [{ position: 60 }], lineItem: [{ position: 60 }] }
+    TotAmonut;
+    @UI: { selectionField: [{ position: 70 }], lineItem: [{ position: 70 }] }
+    VendorFee;
+    @UI: { selectionField: [{ position: 80 }], lineItem: [{ position: 80 }] }
+    ActAmount;
+    @UI: { selectionField: [{ position: 90 }], lineItem: [{ position: 90 }], identification: [{ position: 90, label: 'Actual Amount' }]  }
+    DistintCccard;
+    
+}

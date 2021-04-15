@@ -1,0 +1,40 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Order Item',
+                typeNamePlural: 'Order Items',
+                title: { type: #STANDARD, value: 'Orderno' } } }
+annotate view ZRAP_C_ORDER_I_SRO with
+{
+  @UI.facet: [ { id:          'Orderit',
+               purpose:     #STANDARD,
+               type:        #IDENTIFICATION_REFERENCE,
+               label:       'General Details',
+               position:    10 }  ]
+  @UI: { selectionField: [{ position: 10 }], lineItem: [{ position: 10 }], identification: [ { position: 10, label: 'Order ID'  } ] }
+  Orderno;
+  @UI: { selectionField: [{ position: 20 }], lineItem: [{ position: 20 }], identification: [ { position: 20, label: 'Order Type'  } ] }
+  Orderty;
+  @UI: { selectionField: [{ position: 30 }], lineItem: [{ position: 30 }], identification: [ { position: 30, label: 'Order Item Id'  } ] }
+  Orderit;
+  @UI: { identification: [ { position: 40, label: 'Deletion Indicator'  } ] }
+  Delind;
+  @UI: { selectionField: [{ position: 50 }], lineItem: [{ position: 50 }], identification: [ { position: 50, label: 'Item Status'  } ] }
+  Status;
+  @UI: { identification: [ { position: 60, label: 'Item Language'  } ] }
+  Spras;
+  @UI: { selectionField: [{ position: 70 }], lineItem: [{ position: 70 }], identification: [ { position: 70, label: 'Item Description'  } ] }
+  Txtitm;
+  @UI: { selectionField: [{ position: 80 }], lineItem: [{ position: 80 }], identification: [ { position: 80, label: 'Material / Service'  } ] }
+  Matnr;
+  @UI: { identification: [ { position: 90, label: 'Currency'  } ] }
+  Currency;
+  @UI: { identification: [ { position: 100, label: 'Net Value'  } ] }
+  NetValue;
+  @UI: { identification: [ { position: 110, label: 'Quantity'  } ] }
+  Quantity;
+  @UI: { identification: [ { position: 120, label: 'Net Item Quantity'  } ] }
+  NetQuan;
+  /* Associations */
+  //    _Orderh;
+
+}

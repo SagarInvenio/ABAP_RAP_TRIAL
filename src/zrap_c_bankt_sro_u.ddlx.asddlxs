@@ -1,0 +1,30 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Order Header',
+                typeNamePlural: 'Order Headers',
+                title: { type: #STANDARD, value: 'Bankno' } } }
+annotate view ZRAP_C_BANKT_SRO with
+{
+  @UI.facet: [ { id:        'Bankno',
+               purpose:     #STANDARD,
+               type:        #IDENTIFICATION_REFERENCE,
+               label:       'Bank Details',
+               position:    10 }] 
+  @UI: { selectionField: [{ position: 10 }], lineItem: [{ position: 10 }], identification: [ { position: 10, label: 'Bank ID'  } ] }
+  Bankno;
+  @UI: { selectionField: [{ position: 20 }], lineItem: [{ position: 20 }], identification: [ { position: 20, label: 'Account ID'  } ] }
+  Account;
+  @UI: { selectionField: [{ position: 30 }], lineItem: [{ position: 30 }], identification: [ { position: 30, label: 'Language'  } ] }
+  Spras;
+  @UI: { selectionField: [{ position: 40 }], lineItem: [{ position: 40 }], identification: [ { position: 40, label: 'Description'  } ] }
+  Description;
+  @UI: { selectionField: [{ position: 50 }], lineItem: [{ position: 50 }], identification: [ { position: 50, label: 'Currency'  } ] }
+  Currency;
+  @UI: { selectionField: [{ position: 60 }], lineItem: [{ position: 60 }], identification: [ { position: 60, label: 'Country'  } ] }
+  Country;
+  @UI: { selectionField: [{ position: 70 }], lineItem: [{ position: 70 }], identification: [ { position: 70, label: 'Status'  } ] }
+  Status;
+  @UI: { selectionField: [{ position: 80 }], lineItem: [{ position: 80 }], identification: [ { position: 80, label: 'Balance'  } ] }
+  Balance;
+
+}
