@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zrap_fill_t001_sro IMPLEMENTATION.
+CLASS ZRAP_FILL_T001_SRO IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 

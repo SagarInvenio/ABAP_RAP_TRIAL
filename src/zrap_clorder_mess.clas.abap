@@ -44,7 +44,9 @@ ENDCLASS.
 
 
 
-CLASS zrap_clorder_mess IMPLEMENTATION.
+CLASS ZRAP_CLORDER_MESS IMPLEMENTATION.
+
+
   METHOD constructor ##ADT_SUPPRESS_GENERATION.
 
     super->constructor( previous = previous ).
@@ -63,5 +65,4 @@ CLASS zrap_clorder_mess IMPLEMENTATION.
     ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zrap_fill_partner_sro IMPLEMENTATION.
+CLASS ZRAP_FILL_PARTNER_SRO IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
     DATA itab TYPE TABLE OF zrap_partner_sro.

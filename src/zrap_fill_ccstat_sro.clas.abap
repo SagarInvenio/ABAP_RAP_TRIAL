@@ -12,7 +12,9 @@ ENDCLASS.
 
 
 
-CLASS zrap_fill_ccstat_sro IMPLEMENTATION.
+CLASS ZRAP_FILL_CCSTAT_SRO IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     DATA itab TYPE TABLE OF zrap_ccstate_sro.
 
@@ -42,5 +44,4 @@ CLASS zrap_fill_ccstat_sro IMPLEMENTATION.
     ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.

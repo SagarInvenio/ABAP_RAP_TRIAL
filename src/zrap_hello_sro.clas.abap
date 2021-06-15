@@ -11,7 +11,9 @@ CLASS zrap_hello_sro DEFINITION
 ENDCLASS.
 
 
-CLASS zrap_hello_sro IMPLEMENTATION.
+
+CLASS ZRAP_HELLO_SRO IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
     out->write( |Hello world! ({ cl_abap_context_info=>get_user_alias(  ) })| ).

@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zrap_fill_order_sro IMPLEMENTATION.
+CLASS ZRAP_FILL_ORDER_SRO IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

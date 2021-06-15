@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zrap_fill_lfa1_sro IMPLEMENTATION.
+CLASS ZRAP_FILL_LFA1_SRO IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
     DATA itab TYPE TABLE OF zrap_lfa1_sro.

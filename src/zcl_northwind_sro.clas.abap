@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_northwind_sro IMPLEMENTATION.
+CLASS ZCL_NORTHWIND_SRO IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zrap_fill_digistat_sro IMPLEMENTATION.
+CLASS ZRAP_FILL_DIGISTAT_SRO IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
